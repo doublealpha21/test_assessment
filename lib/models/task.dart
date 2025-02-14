@@ -47,7 +47,7 @@ class Task {
       description: json['description'],
       dueDate: DateTime.parse(json['dueDate']),
       priority: PriorityLevel.values.firstWhere(
-            (e) => e.toString() == json['priority'],
+        (e) => e.toString() == json['priority'],
       ),
       isCompleted: json['isCompleted'],
     );

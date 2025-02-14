@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/task.dart';
 
 class TaskListScreen extends StatefulWidget {
-  const TaskListScreen({Key? key}) : super(key: key);
+  const TaskListScreen({super.key});
 
   @override
   State<TaskListScreen> createState() => _TaskListScreenState();
@@ -79,59 +79,6 @@ class _TaskListScreenState extends State<TaskListScreen> {
     );
   }
 
-  // void _showFilterDialog(BuildContext context) {
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) => AlertDialog(
-  //       title: const Text('Filter Tasks'),
-  //       content: Column(
-  //         mainAxisSize: MainAxisSize.min,
-  //         children: [
-  //           DropdownButton<bool?>(
-  //             value: filter.isCompleted,
-  //             items: const [
-  //               DropdownMenuItem(value: null, child: Text('All')),
-  //               DropdownMenuItem(value: true, child: Text('Completed')),
-  //               DropdownMenuItem(value: false, child: Text('Pending')),
-  //             ],
-  //             onChanged: (value) {
-  //               setState(() {
-  //                 filter = TaskFilter(
-  //                   isCompleted: value,
-  //                   priority: filter.priority,
-  //                 );
-  //               });
-  //             },
-  //           ),
-  //           const SizedBox(height: 16),
-  //           DropdownButton<PriorityLevel?>(
-  //             value: filter.priority,
-  //             items: [
-  //               const DropdownMenuItem(value: null, child: Text('All')),
-  //               ...PriorityLevel.values.map(
-  //                     (p) => DropdownMenuItem(value: p, child: Text(p.toString())),
-  //               ),
-  //             ],
-  //             onChanged: (value) {
-  //               setState(() {
-  //                 filter = TaskFilter(
-  //                   isCompleted: filter.isCompleted,
-  //                   priority: value,
-  //                 );
-  //               });
-  //             },
-  //           ),
-  //         ],
-  //       ),
-  //       actions: [
-  //         TextButton(
-  //           onPressed: () => Navigator.pop(context),
-  //           child: const Text('Close'),
-  //         ),
-  //       ],
-  //     ),
-  //   );
-  // }
   void _showFilterDialog(BuildContext context) {
     showDialog(
       context: context,

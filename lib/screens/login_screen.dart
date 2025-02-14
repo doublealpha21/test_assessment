@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:test_assessment/provider/auth_provider.dart';
 
 class LoginScreen extends ConsumerWidget {
-  LoginScreen({Key? key}) : super(key: key);
+  LoginScreen({super.key});
 
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -32,11 +32,10 @@ class LoginScreen extends ConsumerWidget {
             ElevatedButton(
               onPressed: () {
                 ref.read(authProvider.notifier).login(
-                  _usernameController.text,
-                  _passwordController.text,
-                );
+                      _usernameController.text,
+                      _passwordController.text,
+                    );
               },
-
               child: const Text('Login'),
             ),
           ],
